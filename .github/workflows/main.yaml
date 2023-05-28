@@ -26,3 +26,11 @@ jobs:
       run: |
         docker build -t 363019830908.dkr.ecr.us-east-1.amazonaws.com/vonahe:latest .
         docker push 363019830908.dkr.ecr.us-east-1.amazonaws.com/vonahe:latest
+
+    - name: Deploy to Amazon ECS
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: task-definition.json
+        service: vonahe-svc
+        cluster: vonahe-ecs
+        wait-for-service-stability: true
