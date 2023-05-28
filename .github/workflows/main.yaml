@@ -24,5 +24,5 @@ jobs:
 
     - name: Build, tag, and push docker image to Amazon ECR
       run: |
-        docker build -t vonahe:latest 363019830908.dkr.ecr.us-east-1.amazonaws.com/vonahe:latest .
+        docker build -t 363019830908.dkr.ecr.us-east-1.amazonaws.com/vonahe:latest .
         docker push 363019830908.dkr.ecr.us-east-1.amazonaws.com/vonahe:latest
