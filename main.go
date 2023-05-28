@@ -14,7 +14,7 @@ func main() {
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
 			"mode":    mode,
-			"version": 1.2,
+			"version": 1.3,
 		})
 	})
 
